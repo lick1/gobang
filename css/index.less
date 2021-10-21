@@ -1,0 +1,211 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: content-box;
+}
+button{
+	border: none;
+	background: none;
+}
+html,body{
+	width: 100vw;
+	height: 100vh;
+	overflow: hidden;
+}
+
+.back{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: url(../img/hua.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 50%;
+	filter: blur(10px);
+	opacity: .8;
+	z-index: -1;
+}
+.main{
+	margin: 0 auto;
+	width: 1200px;
+	overflow:hidden;
+	display: flex;
+	justify-content: center;
+	background-size: 100% 100%;
+	
+	.info{
+		width: 400px;
+		height: 700px;
+		border: 1px solid #666;
+		background:url(../img/hua.jpg);
+		margin-top: 30px;
+		.portrait{
+			
+			border-bottom: 4px solid #000;
+			
+			.player-info{
+				width: 140px;
+				h5{
+					&::before{
+						content: "";
+						position: absolute;
+						top: 5px;
+						right: 10px;
+						display: block;
+						width: 40px;
+						height: 40px;
+						background: #000;
+						border-radius: 50%;
+					}
+					&::after{
+						content: "";
+						position: absolute;
+						top: 15px;
+						right: 30px;
+						display: block;
+						width: 0px;
+						height: 0px;
+						background: #fff;
+						border-radius: 50%;
+						box-shadow: 0 0 8px 5px #fff;
+					}
+				}
+			}
+		}
+		.machine{
+			.player-info{
+				h5{
+					&::before{
+							content: "";
+							position: absolute;
+							top: 5px;
+							right: 10px;
+							display: block;
+							width: 40px;
+							height: 40px;
+							background: #ededed;
+							border-radius: 50%;
+						
+						}
+						&::after{
+							content: "";
+							position: absolute; 
+							top: 15px;
+							right: 30px;
+							display: block;
+							width: 0px;
+							height: 0px;
+							background: #000;
+							border-radius: 50%;
+							box-shadow: 0 0 10px 6px #fff;
+						}
+					
+				}
+			}
+		}
+		.centent{
+			height: 300px;
+			display: flex;
+			align-items: center;
+			img{
+				display: block;
+				margin-left: 20px;
+				width: 160px;
+				height: 160px;
+				border-radius: 50%;
+			}
+			.player-info{
+				margin-left: 20px;
+				h5{
+					position: relative;
+					font-size: 32px;
+					margin-bottom: 10px;
+				}
+				div{
+					span{
+						font-size: 24px;
+					}
+					span:first-child{
+						font-size: 28px;
+					}
+				}
+				
+			}
+		}
+		.botton{
+			button{
+				margin-left: 20px;
+				padding: 15px;
+				background: #673328;
+				color: #fff;
+				font-size: 18px;
+				border-radius: 8px;
+			}
+		}
+	}
+	.canvas{
+		position: relative;
+		margin-top: 30px;
+		margin-left: 30px;
+		padding-top: 40px;
+		width: 700px;
+		height: 700px;
+		background: url(../img/hua.jpg);
+		background-size: 100%;
+		padding: 35px;
+		box-sizing: border-box;
+		#canvas{
+			margin: 0 auto;
+			width: 630px;
+			height: 630px;
+			
+		}
+		#canvas1{
+			display: none;
+			position: absolute;
+			top: 35px;
+			left: 35px;
+			width: 630px;
+			height: 630px;
+		}
+	}
+	
+}
+
+.victory{
+		position: fixed;
+		top: 280px;
+		width: 350px;
+		padding: 30px 40px;
+		background: #fff;
+		border-radius: 20px;
+		font-size: 30px;
+		display: none;
+		.btn{
+			margin-top: 30px;
+			font-size: 18px;
+			padding: 10px 30px;
+			border: 1px solid #999;
+			border-radius: 15px;
+		}
+	}
+	
+	
+.game-begin{
+			// display: none;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(50%,-50%);
+			width: 170px;
+			height: 58px;
+			background: #673328;
+			color: #fff;
+			font-size: 24px;
+			line-height: 58px;
+			text-align: center;
+			border-radius: 10px;
+		}
+		
